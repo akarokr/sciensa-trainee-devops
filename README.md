@@ -1,8 +1,8 @@
-#Treinamento DevOps
+# Treinamento DevOps
 
-#Docker the "hard" way
+# Docker the "hard" way
 
-##Docker build
+## Docker build
 
 Para construir a imagem do app do Chuck Norris
 
@@ -12,13 +12,13 @@ Para construir a imagem do Nginx
 
 ```docker build --no-cache --tag sciensa-nginx:latest -f Dockerfile-nginx -t nginx .```
 
-##Docker setup
+## Docker setup
 
 Para criar a rede
 
 ``` docker network create sciensa-trainees```
 
-##Docker run
+## Docker run
 
  - Nginx:
 
@@ -28,7 +28,7 @@ Para criar a rede
 
 ``` docker run -d --name chuck-app --network sciensa-trainees --expose 9667 sciensa-chuck-app:latest ```
 
-#Docker nutella aka compose
+# Docker nutella aka compose
 
 Build:
 
