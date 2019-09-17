@@ -1,0 +1,25 @@
+version: "3.2"
+
+services:
+  chuck-app:
+    container_name: chuck-app
+    build: ./chuck-app
+    restart: always
+    expose:
+      - 9667
+    networks:
+      - sciensa-trainees
+
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - '80:80'
+    restart: always
+    depends_on:
+      - chuck-app
+    networks:
+      - sciensa-trainees
+
+networks:
+  sciensa-trainees:
